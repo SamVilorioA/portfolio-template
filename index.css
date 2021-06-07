@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+:root{
+    /* background colors */
+    --pr-link-bg-color:blue;
+    --pr-bg-color:rgb(43, 43, 119);
+    --sd-bg-color:rgb(228, 213, 181);
+    --pj-bg-color: rgb(122, 180, 122);
+    
+    /*border colors*/
+    --br-img-color:rgb(255, 187, 0);
+}
+/*      ========== Style for Common elements==========    */
+body{
+    background: rgb(216, 215, 215);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+    color: white;
+}
+section{
+    padding: 1% 5%;
+}
+/*   ========== navbar section ==============    */
+.navbar{
+    background-color: var(--pr-bg-color);
+    min-height: 45px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+.navbar .page-title{
+    font-size: 190%;
+}
+.navbar .list-link{
+    display:flex;
+    justify-content: space-around;
+}
+.navbar .list-link li{
+    list-style-type: none;
+    font-size: 20px;
+    margin: 0 10px;
+}
+/* main content */
+.main-content{
+    padding: 0 5%;
+}
+/*   ============ about section ==============   */
+.about-section{
+    background: var(--sd-bg-color);
+}
+.about-section .about-title{
+    text-transform: uppercase;
+}
+.about-section .about-photo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid var(--br-img-color);
+}
+.about-section .about-text{
+    font-size: 25px;
+    text-align: justify;
+}
+
+/*   ============    project section     ==============     */
+.projects-section{
+    background: var(--pj-bg-color);
+}
+.projects-section .projects-title{
+    text-transform: uppercase;
+}
+.projects-section .projects-carousel{
+    display: flex;
+}
+.projects-section .project{
+    display:flex;
+    flex-wrap: wrap;
+}
+.projects-section .project-info{
+    width: 50%;
+}
+.projects-section .project .project-img{
+    height: 200px;
+    width: 200px;
+    border-radius: 0 25px;
+    margin-right: 15px;
+}
+.projects-carousel .project .project-info .project-description{
+    text-align: justify;
+}
+.projects-carousel .project .project-info .project-tags{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    font-size: 18px;
+}
+.projects-carousel .project .project-info .project-tags li{
+    background: green;
+    color:white;
+    border-radius: 15px;
+    padding: 0 2px;
+}
