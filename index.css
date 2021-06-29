@@ -6,12 +6,12 @@
 :root{
     /* background colors */
     --pr-link-bg-color:blue;
-    --pr-bg-color:rgb(43, 43, 119);
-    --sd-bg-color:rgb(228, 213, 181);
+    --pr-bg-color:rgb(43, 43, 119,.95);
+    --sd-bg-color:rgb(255, 220, 145);
     --pj-bg-color: rgb(122, 180, 122);
     
     /*border colors*/
-    --br-img-color:rgb(255, 187, 0);
+    --br-img-color:rgb(206, 151, 0);
 }
 /*      ========== Style for Common elements==========    */
 body{
@@ -61,6 +61,11 @@ section{
 .about-section .about-title{
     text-transform: uppercase;
 }
+.about-section .about-info{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 .about-section .about-photo{
     width: 200px;
     height: 200px;
@@ -70,6 +75,8 @@ section{
 .about-section .about-text{
     font-size: 25px;
     text-align: justify;
+    width:60%;
+    align-self: center;
 }
 
 /*   ============    project section     ==============     */
@@ -80,14 +87,22 @@ section{
     text-transform: uppercase;
 }
 .projects-section .projects-carousel{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
+    padding: auto;
+    grid-gap: 25px;
 }
 .projects-section .project{
     display:flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
 }
 .projects-section .project-info{
     width: 50%;
+    /*display: grid;
+    grid-template-columns:100%*/;
+    grid-row-gap: 10px;
+    background: rgba(202, 247, 206, 0.35);
+    padding:5px;
 }
 .projects-section .project .project-img{
     height: 200px;
@@ -108,5 +123,17 @@ section{
     background: green;
     color:white;
     border-radius: 15px;
-    padding: 0 2px;
+    padding: 0 4px;
+}
+
+/*   ============    footer section     ==============     */
+.page-footer{
+    background: var(--pr-bg-color);
+    height: 100px;
+    padding: 5px;
+    display: grid;
+}
+
+.page-footer .footer-title{
+    text-transform: uppercase;
 }
